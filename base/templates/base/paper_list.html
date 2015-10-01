@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <meta name="adsf">
+    </head>
+    <body>
+        <div>
+            <h1>PAPERS YAY</h1>
+        </div>
+        {% for paper in papers %}
+            <div>
+                <h1>paper: {{ paper.title }}</h1>
+                <p>journal: {{ paper.journal.name }}</p>
+            </div>
+        {% endfor %}
+    </body>
+</html>

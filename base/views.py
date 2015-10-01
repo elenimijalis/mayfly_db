@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from .models import Paper, Journal
 
-# Create your views here.
+def paper_list(request):
+    papers = Paper.objects.all()
+    return render(request, 'base/paper_list.html', {'papers': papers})
