@@ -1,7 +1,11 @@
-from django.conf.urls import url, include
+from django.conf.urls import patterns, url
+from haystack.views import SearchView
+from haystack.query import SearchQuerySet
 from . import views
 
-urlpatterns = [
-    url(r'^$', views.paper_list, name='paper_list'),
-    url(r'^search/', include('haystack.urls')),
-]
+# why am I doing this
+sqs = SearchQuerySet()
+
+urlpatterns = patterns('haystack.views',
+    url(r'^search/', SearchView(template='search/search.html', form_class=views.My_Form), name='haystack_search'),
+)
