@@ -1,33 +1,23 @@
-# from django.shortcuts import render
-from django import forms
-from .models import Paper, Journal
-from haystack.forms import SearchForm
+from django.shortcuts import render
+from models import Paper
+from .forms import PaperForm
 
-# how does this relate to
-class My_Form(SearchForm):
-    start_date = forms.IntegerField(required=False)
-    end_date = forms.IntegerField(required=False)
-    author = forms.CharField(required=False)
-    journal = forms.CharField(required=False)
-    title = forms.CharField(required=False)
+def get_title(request):
+    data = request.GET
+    form = PaperForm(request.GET)
 
-    def search(self):
-        # First, store the SearchQuerySet received from other processing.
-        sqs = super(My_Form, self).search()
+    papers = Paper.objects.all()
 
-        if not self.is_valid():
-            return self.no_query_found()
+    if 'title' in data and len(data['title']) > 0:
+        papers = papers.filter(title__icontains=data['title'])
 
-#         # Check to see if a start_date was chosen.
-        # if self.cleaned_data['start_date']:
-            # sqs = sqs.filter(pub_date__gte=self.cleaned_data['start_date'])
+    if 'author' in data and len(data['author']) > 0:
+        papers = papers.filter(author__icontains=data['author'])
 
-        # # Check to see if an end_date was chosen.
-        # if self.cleaned_data['end_date']:
-            # sqs = sqs.filter(pub_date__lte=self.cleaned_data['end_date'])
+    if 'journal' in data and len(data['journal']) > 0:
+        papers = papers.filter(journal__icontains=data['journal'])
 
-        return sqs
+    # if 'year_start' in data and len(data['year_start']) > 0:
+        # papers = papers.filter(title__icontains=data['title'])
 
-# def paper_list(request):
-    # papers = Paper.objects.all()
-    # return render(request, 'base/paper_list.html', {'papers': papers})
+    return render(request, 'base/search.html', {'form': form, 'papers': papers})

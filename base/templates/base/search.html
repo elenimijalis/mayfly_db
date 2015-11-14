@@ -4,11 +4,18 @@
     </head>
     <body>
         <div>
-            <form action="/your-name/" method="post">
+            <form action="" method="get">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <input type="submit" value="Submit" />
             </form>
+            <div>
+                {% for paper in papers %}
+                    {{ paper.as_table }}
+                    <br>
+                    <br>
+                {% endfor %}
+            </div>
         </div>
     </body>
 </html>
