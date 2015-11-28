@@ -1,6 +1,0 @@
-{{ object.author }}
-{{ object.title }}
-{{ object.journal.name }}
-{ % for keyword in object.keywords_set.all % }
-    {{ keyword.keyword }}
-{ % endfor % }

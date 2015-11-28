@@ -30,7 +30,7 @@
                     <tbody>
                         {% for paper in papers %}
                         <tr>
-                            <td>{{ paper.title|safe }}</td>
+                            <td><a href = "{% url 'paper_detail' pk=paper.pk %}">{{ paper.title|safe }}</a></td>
                             <td>{{ paper.author }}</td>
                             <td>{{ paper.journal }}</td>
                             <td>{{ paper.date }}</td>

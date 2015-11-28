@@ -1,6 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from models import Paper
 from .forms import PaperForm
+
+def paper_detail(request, pk):
+    paper = get_object_or_404(Paper, pk=pk)
+    return render(request, 'base/paper_detail.html', {'paper': paper})
 
 def get_title(request):
     data = request.GET
