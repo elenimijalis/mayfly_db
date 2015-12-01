@@ -14,6 +14,11 @@ def get_title(request):
 
     papers = Paper.objects.all()
 
+    # figure out date_start and date_end from database
+    dates = [paper.date for paper in papers if isinstance(paper.date, int)]
+    date_min = min(dates)
+    date_max = max(dates)
+
     if 'title' in data and len(data['title']) > 0:
         papers = papers.filter(title__icontains=data['title'])
         filtered = True
@@ -26,9 +31,17 @@ def get_title(request):
         papers = papers.filter(journal__name__icontains=data['journal'])
         filtered = True
 
-    # if 'year_start' in data and len(data['year_start']) > 0:
-        # papers = papers.filter(title__icontains=data['title'])
+    # start_date and end_date will always be populated
+    # but check to see if start and end are the same to determine filtered status
+    if 'date_start' in data and len(data['date_start']) > 0:
+        # should this be deleted? if so, ALL papers will show on page load
+        # but what if someone wants to filter on all dates? maybe look at url..?
+        if data['date_start'] != date_min or data['date_end'] != date_max:
+            papers = papers.filter(date__gte=data['date_start'])
+            papers = papers.filter(date__lte=data['date_end'])
+            filtered = True
 
+    # somehow set slider vals (if filtered is false, set as max/min)
     if filtered:
         return render(request, 'base/search.html', {'paperform': paperform, 'dateform': dateform, 'papers': papers})
     else:

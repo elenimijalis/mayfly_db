@@ -22,15 +22,16 @@
     </head>
     <body>
         <div class="container">
-            <form action="" method="get">
+            <form action="" method="get" id="searchForm">
                 <table class="table">
                     {{ paperform }}
-                    {{ dateform }}
+                    {{ dateform.date_start.as_hidden }}
+                    {{ dateform.date_end.as_hidden }}
                 </table>
                 <div style="margin:30px">
                     <div id="slider"></div>
                 </div>
-                <input type="submit" value="Search" />
+                <input type="submit" value="Search" onclick="DateVals()" />
             </form>
             <div>
                 <table class="table" id="fancy_table">
@@ -57,6 +58,8 @@
         </div>
         <script type="text/javascript">
             $(document).ready(function() {
+                date_start = 1888;
+                date_end = 2015;
                 $('#fancy_table').DataTable();
                 $("#slider")
                     .slider({
@@ -67,9 +70,12 @@
                     })
                     .slider("pips")
                     .slider("float");
-                    $("#slider").on("slidechange", function(e, data){
-                        console.log("Something moved" + data.values);
-                    });
+                $("#slider").on("slidechange", function(e, data){
+                    date_start = data.values[0];
+                    date_end = data.values[1];
+                    $('#id_date_start').attr('value', date_start);
+                    $('#id_date_end').attr('value', date_end);
+                });
             } );
         </script>
     </body>
