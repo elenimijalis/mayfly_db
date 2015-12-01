@@ -1,13 +1,24 @@
 <html>
     <head>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
         <link rel="stylesheet" href="//cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css"/>
+        <link rel="stylesheet" href="//cdn.rawgit.com/simeydotme/jQuery-ui-Slider-Pips/master/dist/jquery-ui-slider-pips.css">
 
-        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="//code.jquery.com/jquery-2.1.1.js"></script>
+        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+        <script src="//cdn.rawgit.com/simeydotme/jQuery-ui-Slider-Pips/master/dist/jquery-ui-slider-pips.js"></script>
         <script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
         <script src="//cdn.datatables.net/1.10.10/js/dataTables.bootstrap.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+        <style type="text/css">
+            #slider .ui-slider-tip {
+                visibility: visible;
+                opacity: 1;
+                top: -30px;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
@@ -15,6 +26,12 @@
                 <table class="table">
                     {{ form }}
                 </table>
+                <div style="margin:30px">
+                    <div class="slider"></div>
+                </div>
+                <br>
+                <br>
+                <br>
                 <input type="submit" value="Search" />
             </form>
             <div>
@@ -43,6 +60,15 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#fancy_table').DataTable();
+                $(".slider")
+                    .slider({
+                        min: 1888,
+                        max: 2015,
+                        range: true,
+                        values: [1888, 2015]
+                    })
+                    .slider("pips")
+                    .slider("float");
             } );
         </script>
     </body>
