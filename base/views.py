@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from models import Paper
-from .forms import PaperForm
+from .forms import PaperForm, DateForm
 
 def paper_detail(request, pk):
     paper = get_object_or_404(Paper, pk=pk)
@@ -8,7 +8,8 @@ def paper_detail(request, pk):
 
 def get_title(request):
     data = request.GET
-    form = PaperForm(request.GET)
+    paperform = PaperForm(request.GET)
+    dateform = DateForm(request.GET)
     filtered = False
 
     papers = Paper.objects.all()
@@ -29,7 +30,7 @@ def get_title(request):
         # papers = papers.filter(title__icontains=data['title'])
 
     if filtered:
-        return render(request, 'base/search.html', {'form': form, 'papers': papers})
+        return render(request, 'base/search.html', {'paperform': paperform, 'dateform': dateform, 'papers': papers})
     else:
-        return render(request, 'base/search.html', {'form': form})
+        return render(request, 'base/search.html', {'paperform': paperform, 'dateform': dateform})
 

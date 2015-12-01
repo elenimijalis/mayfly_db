@@ -24,14 +24,12 @@
         <div class="container">
             <form action="" method="get">
                 <table class="table">
-                    {{ form }}
+                    {{ paperform }}
+                    {{ dateform }}
                 </table>
                 <div style="margin:30px">
-                    <div class="slider"></div>
+                    <div id="slider"></div>
                 </div>
-                <br>
-                <br>
-                <br>
                 <input type="submit" value="Search" />
             </form>
             <div>
@@ -60,7 +58,7 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#fancy_table').DataTable();
-                $(".slider")
+                $("#slider")
                     .slider({
                         min: 1888,
                         max: 2015,
@@ -69,6 +67,9 @@
                     })
                     .slider("pips")
                     .slider("float");
+                    $("#slider").on("slidechange", function(e, data){
+                        console.log("Something moved" + data.values);
+                    });
             } );
         </script>
     </body>

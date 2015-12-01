@@ -5,3 +5,7 @@ class PaperForm(forms.Form):
     author = forms.CharField(label='Author', required=False)
     journal = forms.CharField(label='Journal', required=False)
     date = forms.IntegerField(label='Year', required=False)
+
+class DateForm(forms.Form):
+    date_start = forms.IntegerField(label='Start', required=False)
+    date_end = forms.IntegerField(label='End', required=False)
