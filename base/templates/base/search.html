@@ -58,15 +58,15 @@
         </div>
         <script type="text/javascript">
             $(document).ready(function() {
-                date_start = 1888;
-                date_end = 2015;
+                date_start = $('#id_date_start').val();
+                date_end= $('#id_date_end').val();
                 $('#fancy_table').DataTable();
                 $("#slider")
                     .slider({
-                        min: 1888,
+                        min: 1800,
                         max: 2015,
                         range: true,
-                        values: [1888, 2015]
+                        values: [date_start, date_end]
                     })
                     .slider("pips")
                     .slider("float");
