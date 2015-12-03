@@ -1,9 +1,10 @@
 from django import forms
 
 class PaperForm(forms.Form):
-    title = forms.CharField(label='Title', required=False)
-    author = forms.CharField(label='Author', required=False)
-    journal = forms.CharField(label='Journal', required=False)
+    title = forms.CharField(required=False)
+    author = forms.CharField(required=False)
+    journal = forms.CharField(required=False)
+    keyword = forms.CharField(required=False)
 
 class DateForm(forms.Form):
     date_start = forms.IntegerField(label='Start', required=False)

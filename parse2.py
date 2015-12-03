@@ -12,11 +12,12 @@ django.setup()
 with open('papers.csv', 'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',', quotechar='"')
     for i, row in enumerate(csvreader):
+        print i
 
 #         if i > 1:
             # sys.exit()
 
-        # skiplslslheader
+        # skipkheader
         if i == 0:
             continue
 

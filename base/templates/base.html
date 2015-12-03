@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Mayfly db - {% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css"/>
+        <link rel="stylesheet" href="//cdn.rawgit.com/simeydotme/jQuery-ui-Slider-Pips/master/dist/jquery-ui-slider-pips.css">
+
+        <script src="//code.jquery.com/jquery-2.1.1.js"></script>
+        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+        <script src="//cdn.rawgit.com/simeydotme/jQuery-ui-Slider-Pips/master/dist/jquery-ui-slider-pips.js"></script>
+        <script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+        <script src="//cdn.datatables.net/1.10.10/js/dataTables.bootstrap.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+        <style type="text/css">
+            input[type="text"] {
+                width: 100%;
+                padding: 5px;
+            }
+
+            input[type="submit"] {
+                padding-left: 3em;
+                padding-right: 3em;
+            }
+
+            #slider .ui-slider-tip {
+                visibility: visible;
+                opacity: 1;
+                top: -30px;
+            }
+        </style>
+    </head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{%url 'get_title' %}">Mayfly db</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="{%block active_search %}{% endblock %}"><a href="{%url 'get_title' %}">Search</a></li>
+              <li class="{%block active_journal %}{% endblock %}"><a href="{%url 'journal_list' %}">Journals</a></li>
+              <li class="{%block active_keyword%}{% endblock %}"><a href="{%url 'keyword_list' %}">Kewords</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

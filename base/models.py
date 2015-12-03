@@ -26,5 +26,21 @@ class Paper(models.Model):
     pdf = models.BooleanField(default=False)
     url = models.URLField(default='')
 
+    def info_string(self):
+        info_st = "<i>%s</i> " % self.journal.name
+        if self.volume is not "None" and len(self.volume) > 0:
+            info_st += "%s, " % self.volume
+        if self.page_start is not "None" and len(self.page_start) > 0:
+            info_st += "%s " % self.page_start
+            if self.page_end is not "None" and len(self.page_end) > 0:
+                info_st += "- %s " % self.page_end
+        if self.date is not "None" > 0:
+            info_st += "(%s)" % self.date
+        return info_st
+
+    def keyword_string(self):
+        kw_st = (', ').join(['<a href="/?keyword=%s">%s</a>' % (kw.keyword, kw.keyword) for kw in self.keywords.all()])
+        return kw_st
+
     def __unicode__(self):
         return unicode(self.title + ' | ' + self.author)

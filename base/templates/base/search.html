@@ -1,82 +1,76 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
-        <link rel="stylesheet" href="//cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css"/>
-        <link rel="stylesheet" href="//cdn.rawgit.com/simeydotme/jQuery-ui-Slider-Pips/master/dist/jquery-ui-slider-pips.css">
-
-        <script src="//code.jquery.com/jquery-2.1.1.js"></script>
-        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-        <script src="//cdn.rawgit.com/simeydotme/jQuery-ui-Slider-Pips/master/dist/jquery-ui-slider-pips.js"></script>
-        <script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
-        <script src="//cdn.datatables.net/1.10.10/js/dataTables.bootstrap.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-        <style type="text/css">
-            #slider .ui-slider-tip {
-                visibility: visible;
-                opacity: 1;
-                top: -30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <form action="" method="get" id="searchForm">
-                <table class="table">
-                    {{ paperform }}
-                    {{ dateform.date_start.as_hidden }}
-                    {{ dateform.date_end.as_hidden }}
-                </table>
-                <div style="margin:30px">
-                    <div id="slider"></div>
-                </div>
-                <input type="submit" value="Search" onclick="DateVals()" />
-            </form>
-            <div>
-                <table class="table" id="fancy_table">
-                    <thead>
-                        <tr>
-                            <th>Title</th>
-                            <th>Author</th>
-                            <th>Journal</th>
-                            <th>Year</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for paper in papers %}
-                        <tr>
-                            <td><a href = "{% url 'paper_detail' pk=paper.pk %}">{{ paper.title|safe }}</a></td>
-                            <td>{{ paper.author }}</td>
-                            <td>{{ paper.journal }}</td>
-                            <td>{{ paper.date }}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+{% extends "base.html" %}
+{% block title %}Search{% endblock %}
+{% block active_search %}active{% endblock %}
+{% block content %}
+<div class="container">
+    <form action="" method="get" id="searchForm">
+        <table class="table">
+            <div classs="row">
+                <div class="col-md-6"><h4>Title</h4>{{ paperform.title }}</div>
+                <div class="col-md-6"><h4>Author</h4>{{ paperform.author }}</div>
             </div>
+            <div classs="row">
+                <div class="col-md-6"><h4>Journal</h4>{{ paperform.journal }}</div>
+                <div class="col-md-6"><h4>Keywords</h4>{{ paperform.keyword }}</div>
+            </div>
+            {{ dateform.date_start.as_hidden }}
+            {{ dateform.date_end.as_hidden }}
+        </table>
+        <div style="margin:30px">
+            <div id="slider"></div>
         </div>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                date_start = $('#id_date_start').val();
-                date_end= $('#id_date_end').val();
-                $('#fancy_table').DataTable();
-                $("#slider")
-                    .slider({
-                        min: 1800,
-                        max: 2015,
-                        range: true,
-                        values: [date_start, date_end]
-                    })
-                    .slider("pips")
-                    .slider("float");
-                $("#slider").on("slidechange", function(e, data){
-                    date_start = data.values[0];
-                    date_end = data.values[1];
-                    $('#id_date_start').attr('value', date_start);
-                    $('#id_date_end').attr('value', date_end);
-                });
-            } );
-        </script>
-    </body>
-</html>
+        <div class="row" style="text-align:center">
+            <input type="submit" class="btn btn-primary" value="Search" onclick="DateVals()" />
+        </div>
+    </form>
+    <div>
+        <table class="table" id="fancy_table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Journal</th>
+                    <th>Year</th>
+                    <th>Volume</th>
+                    <th>Keywords</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for paper in papers %}
+                <tr>
+                    <td><a href = "{% url 'paper_detail' pk=paper.pk %}">{{ paper.title|safe }}</a></td>
+                    <td>{{ paper.author }}</td>
+                    <td>{{ paper.journal }}</td>
+                    <td>{{ paper.date }}</td>
+                    <td>{{ paper.volume }}</td>
+                    <td>{{ paper.keyword_string|safe }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        date_start = $('#id_date_start').val();
+        date_end = $('#id_date_end').val();
+        $('#fancy_table').DataTable({"bFilter": false});
+        $("#slider")
+            .slider({
+                min: {{ date_min }},
+                max: {{ date_max }},
+                range: true,
+                values: [date_start, date_end]
+            })
+        .slider("pips", {
+        })
+            .slider("float");
+        $("#slider").on("slidechange", function(e, data){
+            date_start = data.values[0];
+            date_end = data.values[1];
+            $('#id_date_start').attr('value', date_start);
+            $('#id_date_end').attr('value', date_end);
+        });
+    } );
+</script>
+{% endblock %}

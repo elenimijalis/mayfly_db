@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Journals{% endblock %}
+{% block active_journal %}active{% endblock %}
+{% block content %}
+<div class="container">
+    <div>
+        <table class="table" id="fancy_table">
+            <thead>
+                <tr>
+                    <th>Journal</th>
+                    <th>Number of Papers</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for journal in journals %}
+                <tr>
+                    <td><a href="/?journal={{ journal.name }}">{{ journal }}</a></td>
+                    <td>{{ journal.paper_set.all | length }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#fancy_table').DataTable({"bFilter": false});
+    } );
+</script>
+{% endblock %}

@@ -74,7 +74,7 @@ Serial#,SerialName
 81,Bulletin of the Illinois [State] Natural History Survey
 82,Beiträge zur Kenntnis der Land - und Südswasserfauna Deutsch-Südwestafrikas
 83,"Bulletin of the Lloyd Library, Entomological Series"
-84,Bollettino del Laboratorio de Zoologia Generale e Agraria dell Facolt?Agraria in Portici
+84,Bollettino del Laboratorio di zoologia generale e agraria della Facoltà agraria in Portici
 85,Bulletin of the Museum of Comparative Zoology
 86,"Bulletin du Muséum National d'Histoire Naturelle, Paris"
 87,Beiträge zur Naturkundlichen Forschung in Südwestdeutschland
@@ -177,8 +177,8 @@ Serial#,SerialName
 198,Journal of Agriculture of the University of Puerto Rico
 200,"Journal of the College of Agriculture, Tohoku Imperial University, Sapporo"
 201,"Journal of Entomology, London"
-202,"Journal of Entomology, Series A [use ser#201 with ""(A)""]"
-203,"Journal of Entomology, Series B [use ser#201 with ""(B)""]"
+202,"Journal of Entomology, Series A"
+203,"Journal of Entomology, Series B"
 204,Journal of Economic Entomology
 205,Journal of the Entomological Society of Southern Africa
 206,Journal of the Entomological Society of the South of England
@@ -232,7 +232,7 @@ Serial#,SerialName
 254,"Miscellaneous Reports of the Yamashina Institute for Ornithology and Zoology [Yamashina Chorui Kenkyujo, Tokyo]"
 255,Memorias de la Sociedad Cubana de Historia Natural
 256,Mitteilungen der Schweizerischen Entomologischen Gesellschaft
-257,Memorie della Societ?Entomologica Italiana
+257,Le Memorie della Società Entomologica Italiana
 258,Memorias de la Sociedad Iberica de Ciencias Naturales
 259,Memoires de la Société Royale d'Entomologie de Belgique
 260,Mushi
@@ -247,7 +247,7 @@ Serial#,SerialName
 269,Norwegian Journal of Entomology
 270,"Neues Jahrbuch für geologie und palaontologie, Monatshefte"
 271,Notes from the Leyden Museum
-272,Nature and Life in Southeast Asia
+272,Fauna Republicii Socialiste România
 273,Naturaliste Malgache
 274,Notulae Naturae
 275,Nouvelle Revue d'Entomologie
@@ -321,7 +321,7 @@ Serial#,SerialName
 343,Revue d'Entomologie
 344,Razón y Fe
 345,Revue Française d'Entomologie
-346,"Records of the Indian Museum, Calcutta"
+346,Records of the Indian Museum
 347,Recueil de l'Institut Zoologique Torley-Rousseau
 348,Revista Montserratina
 349,"Revista do Museu Paulista, Sao Paulo"
@@ -339,7 +339,7 @@ Serial#,SerialName
 361,South African Animal Life
 362,South African Journal of Science
 363,"Sitzungsberichte der Akademie der Wissenschaften in Wien, Mathematische-Naturwissenschaftliche Klasse (Abtheilung I)"
-364,Stuttgarter Beiträge zur Naturkunde [aus dem Staatlichen Museum fur Naturkunde in Stuttgart]
+364,Stuttgarter Beiträge zur Naturkunde
 365,Science and Culture
 366,"Science, New York"
 367,Systematic Entomology
@@ -399,7 +399,7 @@ Serial#,SerialName
 423,Aquatic Insects
 424,"Arxius [Arxivs] de l'Institute [d'Estudis Catalans, Seccio] de Ciencias, Barcelona"
 425,Abhandlungen der Koniglichen Akademie der Wissenschaften zu Berlin
-426,Annuario del [R.] Museo Zoologico della R. Universit?di Napoli
+426,Annuario del Museo Zoologico della Università di Napoli
 427,"Abhandlungen der Preussischen Akademie der Wissenschaften, Berlin"
 429,Archivio Zoologico Italiano
 430,Bulletin de l'Academie des Sciences de Russie [=Izvestiya Akademii nauk SSSR]
@@ -407,7 +407,7 @@ Serial#,SerialName
 432,"Bulletin de l'Institut Française d'Afrique Noire (Series A, Sciences Naturelles)"
 433,Boletim do Museu Municipal do Funchal
 434,Bulletin Mensuel de la Société Linnéenne de Lyon
-435,Bollettino dei Musei di Zoologia e di Anatomia Comparata della R. Universit?di Torino
+435,Bollettino dei musei di zoologia ed anatomia comparata della R. Università di Torino
 436,Bulletin of the Osaka Museum of Natural History
 437,Bulletin de la Société Géologique de France
 438,"Compte Rendu de l'Association Française pour l'Avancement des Sciences, Paris"
@@ -531,7 +531,7 @@ Serial#,SerialName
 559,Palestine Citrograph
 560,Junta de Ciences Natvrals
 561,Ent. Hortic.
-562,An. Soc. Esp. [?Anales de la [Real] Sociedad Española de física y Química]
+562,An. Soc. Esp. [Anales de la [Real] Sociedad Española de física y Química]
 563,"Naturw. Grundbegr. Landb. Praxis, Munich Zool."
 564,Animal Behaviour
 565,Neth. J. Zool.
@@ -579,7 +579,7 @@ Serial#,SerialName
 610,Atti dell'Accademia Gioenia di Scienze Naturali
 611,Graellsia
 612,"Bulletin, Association Philomathique d'Alsace et de Lorraine"
-613,Travaux du Laboratoire de Zoologie et de la Station Aquicole Grimaldi de la Facult?des Sciences de Dijon
+613,Travaux du Laboratoire de zoologie et de la Station aquicole Grimaldi de la Faculté des sciences de Dijon
 614,Fragmenta Balcanica Musei Macedonici Scientiarum Naturalium
 615,"Rendiconti dell'Accademia delle Scienze Fisiche e Matematiche, Napoli"
 616,Annals of the Natal Museum
@@ -727,7 +727,7 @@ Serial#,SerialName
 767,Zoologist
 768,Palaeontographica: Beiträge zur Naturgeschichte der Vorwelt [or Vorzeit]
 769,Annual Report of the United States Geological [and Geographical] Survey of the Territories
-770,Vestník Ceskoslovensk?Spolecnosti Zoologick
+770,Věstník Československé společnosti zoologické
 771,"Bollettino del Laboratorio Ent. Agraria Filippo Silvestri, Portici [=? ser#84]"
 772,Irish Naturalist
 773,"Proceedings of the Royal Irish Academy, Dublin"
@@ -817,8 +817,8 @@ Serial#,SerialName
 860,Lansania
 861,Turkiye Bitki Koruma Dergisi
 862,"Sborník Narod. Umot. Nauk Knizn., Sofia"
-863,"Cesk?Akad. Císar?Frantiska Josefa, Praze"
-864,Vestník Cesk?Akad. Císar?Frantiska Josefa
+863,"Česká akademie císaře Františka Josefa, Praze"
+864,Věstník České akademie císaře Františka Josefa
 865,Természetrajzi Füzetek
 866,Glasnik Zemaljskog Museja u Bosni i Hercegovini
 867,Wiss. Mitt. Bosnien Hercegovina
@@ -881,7 +881,7 @@ lles Handlingar"
 927,Actes de la Société Linnéenne de Bordeaux
 928,Gen. Apl. Entomol.
 929,Bulletin de l'Académie [Royal] de Belgique. Classe des Sciences
-930,Entomologick?Listy
+930,Entomologické Listy
 931,Transactions of the American Fisheries Society
 932,Aramco World Magazine
 933,Entomonograph
@@ -914,7 +914,7 @@ lles Handlingar"
 962,"London and Edinburgh Philosophical Magazine and Journal of Science [=Philosophical Magazine, London]"
 964,Bulletin Biologique de la France et de la Belgique Supplement
 965,Journal of Agricultural Research in China
-966,"Bollettino dell'Istituto di Entomologia ""Guido Grandi"" dell'Universit?di Bologna"
+966,"Bollettino dell'Istituto di Entomologia ""Guido Grandi"" dell'Università di Bologna"
 967,Memorabilia Zoologica
 968,"Zeitschrift für Entomologie, Breslau"
 969,"Rocznik Museum Górnoslaskiego w Bytomiu, Przyroda [=Annals of the Upper Silesian Museum in Bytom, Natural History]"
@@ -1019,7 +1019,7 @@ lles Handlingar"
 1073,"Rozpravy Polsk. Akad. Um., Cracow"
 1074,Proceedings of the South London Entomological and Natural History Society
 1076,Boll. Ist. Ent. Agr. Univ. Perugia
-1077,Annali della Facolt?di Agraria della [R.] Universit?degli Studi di Perugia
+1077,Annali della Facoltà di agraria / R. Università degli studi di Perugia
 1078,Minn. Agr. Exp. Sta. Bull.
 1079,Doklady Akademii Nauk Tadzhikskoi SSR [=Proceedings of the Academy of Sciences of the Tadzhik SSR]
 1080,"Izvestiya Akademii nauk Tadzhikshoi SSR, Otdelenie Biologicheskikh Nauk [=Notes of the Academy of Sciences of the Tadzhik SSR, Series Biological Sciences]"
@@ -1165,7 +1165,7 @@ lles Handlingar"
 1226,Entomological Gazette (=?135)
 1227,"Ann. Rept. Noxious, Beneficial and Other Insects of Missouri"
 1228,Mitteilungen der Entomologia Zürich und Umgebung
-1229,Travaux de la Société des Naturalistes ... l'Universit?de Kharkow
+1229,Travaux de la Société des naturalistes à l'Université Impériale de Kharkow
 1230,Bericht über die Versammlung Deutscher Naturforscher und Arzte
 1231,Sitz.-Ber. Ges. Isis
 1232,Ver. F. Naturk. in Zwickau
@@ -1350,7 +1350,7 @@ lles Handlingar"
 1421,Tropical Zoology
 1422,Raffles Bulletin of Zoology
 1423,"Fragmenta Entomologica, Roma"
-1424,Bollettino della Societ?Romana d'Entomologia
+1424,Bollettino della Società Romana d'Entomologia
 1425,Quaderni del Museo di Storia Naturale di Patrica
 1426,"Bulletin of the Natural History Museum, Entomology"
 1427,"Magazin des Thierreichs, [Reich], Erlangen"
@@ -1498,7 +1498,7 @@ lles Handlingar"
 1571,Rudolstadter Nat. Hist. Schr.
 1572,"Entomologische Nachrichten und Berichte, Berlin"
 1573,Linz. Biol. Beitr.
-1574,Boll. Zool.
+1574,Bollettino di Zoologia
 1575,Journal of the Tennessee Academy of Science
 1576,Nauchnye Trudy Kuibyschevskogo Gos. Pedagogicheskogo Instituta [=Transactions of the Pedagogical Institute of Kuibyshev]
 1577,Trudy Obschestva Issledovatelei Volyni [=Annales of the Society of Researchers of Volyn']
@@ -1720,7 +1720,7 @@ lles Handlingar"
 1811,Proceedings of the Quarterly Journal of the Geological Society of London
 1812,Freshwater Forum
 1813,Journal of the Taiwan Mus.
-1814,Sborník Vlastivednych Prac?z Podblanicka
+1814,Sborník vlastivědných prací z Podblanicka
 1815,Zprávy České zoologické společnosti
 1816,Acta Musei Reginaehradecensis
 1817,Silva Gabreta
@@ -1786,7 +1786,7 @@ lles Handlingar"
 1879,Bulletin of Environmental Contamination and Toxicology
 1880,Bulletin of the Bureau of Fisheries
 1881,Fisheries
-1882,"Academia, [C]eskoslovensk?Akademie V[e]d, Praha"
+1882,"Academia, Československá Akademie Věd, Praha"
 1884,Revue d'Hydrobiologie Tropicale
 1885,Mémoires de la Société Vaudoise des Sciences Naturelles
 1886,Internationale Revue der Gesamten Hydrobiologie
@@ -1825,3 +1825,76 @@ lles Handlingar"
 1921,Zootaxa
 1922,Trends in Entomology
 1923,Faunistische Abhandlungen Staatliches Museum fur Tierkunde Dresden
+1924, Multivariate Environmental Statistics
+1925,Acta Univ. Carolinae
+1926,"Acta Universitatis Carolinae, Biologica"
+1927,Acta Zootaxonomica Sinica.
+1928,Altiplano Aquatic Insects
+1929,Ann. Entomol. Soc. Am.
+1930,Ann. Rev. Entomol
+1931,Ann. Soc. Entomol. Belg.
+1932,Annales de Biologie Lacustre
+1933,Annls Limnol.
+1934,"Aquatic Biota of Mexico, Central America and the West Indies, S.H. Hrlbert and A. Villalobos-figueroa, eds."
+1935,Book
+1936,"Agricultural and Home Economics Experiment Station, Iowa State University of Science and Technology"
+1937,Arbeiten der Biologischen Wolga-Station
+1938,Arthropod Relationships
+1939,Brazilian Archives of Biology and Technology
+1940,Bull. Soc. Vaud. Sc. Nat.
+1941,Bulletin du Musée Royal d'Histoire Naturelle de Belgique
+1942,"Bulletin of Department of Biology, Yenching University"
+1943,Sborník Ústredního Ústavu Geologického
+1944,Freshwater Biological Association of the British Empire
+1945,Diversité et endémisme à Madagascar
+1946,"Zool. Inst. Rus. Acad. Sci., St.Petersburg"
+1947,Pakistan Journal of Science
+1948,Prace Komisji Biologicznej Poznanskie Towarzystwo Przyjaciól Nauk
+1949,Proc. Biol. Sci.
+1950,Rev. Bras. Entomol.
+1951,Revue d'Entomologie de I'URSS
+1952,Zool. Zhurnal
+1953,Vestnik Leningrad. Univ.
+1954,Southeastern Biology
+1955,P. Kom. Biol. Pozn. Tow. Przyk. Nauk
+1956,Une Mission Biologique Belge au Brésil
+1957,Vĕstnik Ústředniho Ústavu Geologického
+1958,Consiglio Nazionale delle Ricerche
+1959,Bulletin de l'Institut Royal des Sciences Naturelles de Belgique
+1960,Sborník geol. Ved
+1961,Biogeografia
+1962,Biologica Centrali-Americana
+1963,Biological Journal of the Linnean Society
+1964,Biota Neotropica
+1965,"Boletin del Museo Nacional de Historia Natural, Chile"
+1966,Bulletin de I.F.A.N.
+1967,"Cah. ORSTOM, sér. Hydrobiol"
+1968,Caldasia
+1969,Can. Bull. Fish. Aquat. Sci.
+1970,Canadian Journal of Arthropod Identification
+1971,Check List
+1972,Ciência Biológica
+1973,Cladistics
+1974,Ephemera
+1975,Festschrift für Zschokke
+1976,The Quaternary of the United States.
+1977,Parc National de l'Upemba
+1978,Internationale Vereinigung für Theorestische and Angewanddte Limnologie Verhandlungen
+1979,Journal of Biogeography
+1980,"Journal Siam Society, Natural History Supplement"
+1981,Loris: The Journal of the wildlife and nature protection society of Sri Lanka.
+1982,Proceedings of the Symposium on Nature Conservation and Entomology in the 21st Century
+1983,Neotropical Entomology
+1984,New Mexico Bureau of Mines and Mineral Resources Bulletin
+1985,Papilio
+1986,Peking Natural History Bulletin
+1987,Proc. R. Ent. Soc. Lond.
+1988,Reichenbachia Mus. Tierk Dresden
+1989,Rev. de Entomologia
+1990,Rev. Soc. Uruguaya Ent.
+1991,Revue Zoologique Africaine
+1992,Scientific Note
+1993,Systematic Biology
+1994,The Poznan Society of Friends of Science
+1995,Trans. Amer. Microsc. Soc.
+1996,"University of Utah, Anthropological Papers"
