@@ -24,7 +24,7 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#fancy_table').DataTable({"bFilter": false});
+        $('#fancy_table').DataTable({"bFilter": false, "aaSorting": [[1, 'desc']]});
     } );
 </script>
 {% endblock %}

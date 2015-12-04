@@ -14,7 +14,7 @@
             <tbody>
                 {% for keyword in keywords %}
                 <tr>
-                    <td><a href="/?keyword={{ keyword.name }}">{{ keyword }}</a></td>
+                    <td><a href="/?keyword={{ keyword.keyword }}">{{ keyword }}</a></td>
                     <td>{{ keyword.paper_set.all | length }}</td>
                 </tr>
                 {% endfor %}
@@ -24,7 +24,7 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#fancy_table').DataTable({"bFilter": false});
+        $('#fancy_table').DataTable({"bFilter": false, "aaSorting": [[1, 'desc']]});
     } );
 </script>
 {% endblock %}
