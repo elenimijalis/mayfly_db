@@ -17,7 +17,7 @@ with open('papers.csv', 'r') as csvfile:
 #         if i > 1:
             # sys.exit()
 
-        # skipkheader
+        # skip header
         if i == 0:
             continue
 
@@ -64,15 +64,13 @@ with open('papers.csv', 'r') as csvfile:
 
         # reprint
         try:
-            reprint = bool(row[10])
+            reprint = bool(int(row[10]))
         except:
             reprint = False
 
-        # pdf
-        try:
-            pdf = bool(row[12])
-        except:
-            pdf = False
+        # lookup number for pdf
+        lookup = row[11]
+
 
         paper = Paper(author=author,
                       date=date,
@@ -82,7 +80,7 @@ with open('papers.csv', 'r') as csvfile:
                       page_start=page_start,
                       page_end=page_end,
                       reprint=reprint,
-                      pdf=pdf)
+                      lookup=lookup)
         paper.save()
 
         # keywords

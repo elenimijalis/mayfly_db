@@ -23,8 +23,8 @@ class Paper(models.Model):
     page_end = models.CharField(max_length=64, default='')
     keywords = models.ManyToManyField(Keyword)
     reprint = models.BooleanField(default=False)
-    pdf = models.BooleanField(default=False)
-    url = models.URLField(default='')
+    lookup = models.CharField(max_length=32, default='')
+    pdf = models.FileField(null=True, blank=True)
 
     def info_string(self):
         info_st = "<i>%s</i> " % self.journal.name

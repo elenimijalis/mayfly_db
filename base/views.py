@@ -16,7 +16,6 @@ def get_title(request):
     date_min = min(dates)
     date_max = max(dates)
 
-
     data = request.GET
     paperform = PaperForm(request.GET)
 
